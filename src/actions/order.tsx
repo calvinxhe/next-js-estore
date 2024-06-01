@@ -47,7 +47,7 @@ export async function emailOrderHistory(
     }
   }
 
-  const orders = user.orders.map(async (order: { product: { id: any } }) => {
+  const orders = user.orders.map(async order => {
     return {
       ...order,
       downloadVerificationId: (
